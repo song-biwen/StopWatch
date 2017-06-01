@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WZStopWatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ImR-Mo-NiW">
+                                <rect key="frame" x="299" y="66" width="60" height="40"/>
+                                <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="47o-df-Fvq"/>
+                                    <constraint firstAttribute="height" constant="40" id="i5g-34-2mU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="reset">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="resetButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2N-mK-sKS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7D3-Sj-W1g">
+                                <rect key="frame" x="16" y="114" width="343" height="161"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="161" id="mn1-Pv-O7M"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="72"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asC-tu-3ie">
+                                <rect key="frame" x="0.0" y="283" width="187.5" height="384"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <state key="normal" title="play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="playButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YV8-Ak-gdo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Muj-t0-BAt">
+                                <rect key="frame" x="187.5" y="283" width="187.5" height="384"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="54"/>
+                                <state key="normal" title="pause">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pauseButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tuU-ev-RUc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ImR-Mo-NiW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="1GG-Gn-vlf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="asC-tu-3ie" secondAttribute="bottom" id="92l-8R-w5f"/>
+                            <constraint firstItem="Muj-t0-BAt" firstAttribute="bottom" secondItem="asC-tu-3ie" secondAttribute="bottom" id="CPE-eI-wLq"/>
+                            <constraint firstItem="Muj-t0-BAt" firstAttribute="leading" secondItem="asC-tu-3ie" secondAttribute="trailing" id="G7A-4u-n6b"/>
+                            <constraint firstItem="7D3-Sj-W1g" firstAttribute="top" secondItem="ImR-Mo-NiW" secondAttribute="bottom" constant="8" id="GFC-f2-V0z"/>
+                            <constraint firstItem="asC-tu-3ie" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="c6a-eg-KbK"/>
+                            <constraint firstItem="asC-tu-3ie" firstAttribute="width" secondItem="Muj-t0-BAt" secondAttribute="width" id="lAn-lJ-1G1"/>
+                            <constraint firstAttribute="trailing" secondItem="Muj-t0-BAt" secondAttribute="trailing" id="lHz-fS-uPu"/>
+                            <constraint firstItem="7D3-Sj-W1g" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="odM-gG-5n6"/>
+                            <constraint firstAttribute="trailing" secondItem="ImR-Mo-NiW" secondAttribute="trailing" constant="16" id="qWc-Zo-Hfm"/>
+                            <constraint firstItem="asC-tu-3ie" firstAttribute="top" secondItem="7D3-Sj-W1g" secondAttribute="bottom" constant="8" id="uCI-eA-UPm"/>
+                            <constraint firstItem="Muj-t0-BAt" firstAttribute="top" secondItem="asC-tu-3ie" secondAttribute="top" id="vG1-r8-bcx"/>
+                            <constraint firstItem="7D3-Sj-W1g" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zOr-RN-gw8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="countLabel" destination="7D3-Sj-W1g" id="frh-Ew-1aa"/>
+                        <outlet property="pauseButton" destination="Muj-t0-BAt" id="Hxl-Zd-gTt"/>
+                        <outlet property="playButton" destination="asC-tu-3ie" id="d9h-kN-MCj"/>
+                        <outlet property="resetButton" destination="ImR-Mo-NiW" id="dsP-RM-0aV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
